@@ -1,13 +1,11 @@
-# WHAT: This workflow action is maintain the static code sanity
-# WHEN: Triggered when tried merging into `main` branch 
-#
+# To make basic sanity check
 
-name: lint
+name: code-sanity 
 run-name: ${{ github.actor }} is running code santiy check 🚀
 on:
     push:
         branches:
-            - task/lint
+            - task/*
 jobs:
     lint-job:
         runs-on: solinas-small
@@ -16,5 +14,7 @@ jobs:
               run: npm install
             - name: running lint
               run: npm run lint
+            - name: running tests
+              run: npm run test
 
 
