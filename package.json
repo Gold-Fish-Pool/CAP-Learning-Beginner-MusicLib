@@ -1,0 +1,53 @@
+{
+  "name": "CAP-Learning-Beginner-MusicLib",
+  "version": "1.0.0",
+  "description": "A Beginners friendly CAP project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.tools.sap/Blue-Ocean/CAP-Learning-Beginner-MusicLib.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^8",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^0.2.0",
+    "@cap-js/cds-types": "^0.9.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/eslint-plugin-cds": "^3.2.0",
+    "eslint": "^9.21.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": "20.17",
+    "npm": "9.9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "lint": "npx eslint .",
+    "test": "jest",
+    "coverage": "npx jest --coverage"
+  },
+  "cds": {
+    "i18n": {
+      "default_language": "en",
+      "folders": [
+        "i18n"
+      ],
+      "for_sqlite": [
+        "en",
+        "de"
+      ],
+      "for_sql": [
+        "en",
+        "de"
+      ],
+      "preserved_locales": [
+        "en",
+        "de"
+      ]
+    }
+  }
+}

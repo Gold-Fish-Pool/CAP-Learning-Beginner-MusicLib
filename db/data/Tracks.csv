@@ -1,0 +1,7 @@
+ID,title,description,isActive,albumUUID,genreUUID
+ea610039-0f6c-4306-aaab-43089f06d1d6,"Ameriican Requiem","Lyrics by Beyone and team | Music by Derek Dixie, Tyler Jhonson | Produced by Beyonce | Duration 5.25min",true,ea610039-0f6c-4306-aaab-43089f06d1d6,cae42ffe-61a3-4472-8009-7e69b52811aa
+ad37408c-69e6-45f1-82b5-727dea1e6daa,"My Rose","Lyrics by Beyone and team | Music by Derek Dixie, Tyler Jhonson | Produced by Beyonce | Duration 5.25min",true,ea610039-0f6c-4306-aaab-43089f06d1d6,5ca005b6-8c87-4b9e-9f48-c52703365193
+cae42ffe-61a3-4472-8009-7e69b52811aa,"Real House","Lyrics by Adrianne Lenker | Music by  Adrianne Lenker | Produced by Philip Weinrobe, Adrianne Lenker | Duration 5.55min",true,ad37408c-69e6-45f1-82b5-727dea1e6daa,ea610039-0f6c-4306-aaab-43089f06d1d6
+110e7ccd-e332-40cf-8c79-42c0bfa0b58a,"Deeper Well","Lyrics by Kacey Musgraves, Daniel Tashian, and Ian Fitchuk | Music by Derek Dixie, Tyler Jhonson | Produced by Kacey Musgraves | Duration 4.55min",true,cae42ffe-61a3-4472-8009-7e69b52811aa,110e7ccd-e332-40cf-8c79-42c0bfa0b58a
+5ca005b6-8c87-4b9e-9f48-c52703365193,"Don't Wanna Break Up Again","Lyrics by Grande | Music by Martin | Produced by Ariana Grande | Duration 2.25min",true,110e7ccd-e332-40cf-8c79-42c0bfa0b58a,5ca005b6-8c87-4b9e-9f48-c52703365193
+e0f5a583-0256-4b0d-bf1e-2f286eb36b4d,"Young Metro","Lyrics by Wilburn Wayne | Music by Richardson | Produced by Metro Boomin, Mike  | Duration 3.15min",true,5ca005b6-8c87-4b9e-9f48-c52703365193,110e7ccd-e332-40cf-8c79-42c0bfa0b58a

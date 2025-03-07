@@ -1,0 +1,20 @@
+# WHAT: This workflow action is maintain the static code sanity
+# WHEN: Triggered when tried merging into `main` branch 
+#
+
+name: lint
+run-name: ${{ github.actor }} is running code santiy check 🚀
+on:
+    push:
+        branches:
+            - task/lint
+jobs:
+    lint-job:
+        runs-on: solinas-small
+        steps:
+            - name: installing dependencies
+              run: npm install
+            - name: running lint
+              run: npm run lint
+
+

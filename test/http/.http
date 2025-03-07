@@ -1,0 +1,29 @@
+### GET Count of Geners
+GET http://localhost:4004/music-lib/Geners/$count
+
+
+### GET Genre by ID expand Tracks
+GET http://localhost:4004/music-lib/Geners/5ca005b6-8c87-4b9e-9f48-c52703365193?$expand=*
+
+
+### GET Genre filter by title
+GET http://localhost:4004/music-lib/Geners?$filter=title eq 'Blues'
+
+
+### Create Geners - METHOD NOT ALLOWED
+POST http://localhost:4004/music-lib/Geners/$count
+content-type: application/json
+
+{
+    "title": "Dummy Gener",
+    "description": "Some Desc"
+}
+
+
+### GET the number of Tracks
+GET http://localhost:4004/music-lib/Track/$count
+
+
+
+### GET Specific Tracks and expand its associations
+GET http://localhost:4004/music-lib/Track/110e7ccd-e332-40cf-8c79-42c0bfa0b58a?$expand=*

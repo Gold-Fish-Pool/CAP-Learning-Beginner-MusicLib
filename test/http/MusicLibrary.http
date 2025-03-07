@@ -1,0 +1,198 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### getTopSinger
+# @name getTopSinger_GET
+GET {{server}}/music-lib/getTopSinger()
+{{auth}}
+
+
+### Track
+# @name Track_GET
+GET {{server}}/music-lib/Track
+{{auth}}
+
+
+### Track
+# @name Track_GET Nested expansion
+GET {{server}}/music-lib/Track?$expand=artistTracks($expand=artists)
+{{auth}}
+
+
+### Geners
+# @name Geners_GET
+GET {{server}}/music-lib/Geners
+{{auth}}
+
+
+### Album
+# @name Album_GET
+GET {{server}}/music-lib/Album
+{{auth}}
+
+
+### Artist
+# @name Artist_GET
+GET {{server}}/music-lib/Artist
+{{auth}}
+
+
+### Geners
+# @name Geners_POST
+POST {{server}}/music-lib/Geners
+Content-Type: application/json
+{{auth}}
+
+{
+  "title": "title-5993270",
+  "description": "description-5993270",
+  "createdAt": "2018-05-28T18:30:00.000Z",
+  "createdBy": "createdBy.3kgfq@example.org",
+  "modifiedAt": "2012-06-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.3kgfq@example.net"
+}
+
+### Album
+# @name Album_POST
+POST {{server}}/music-lib/Album
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "59932705-842f-45e2-ba40-319bd995d02a",
+  "title": "title-5993270",
+  "description": "description-5993270",
+  "isActive": true,
+  "createdAt": "2018-05-28T18:30:00.000Z",
+  "createdBy": "createdBy.3kgfq@example.org",
+  "modifiedAt": "2012-06-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.3kgfq@example.net"
+}
+
+
+### Album
+# @name Album_PATCH
+PATCH {{server}}/music-lib/Album/59932705-842f-45e2-ba40-319bd995d02a
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "59932705-842f-45e2-ba40-319bd995d02a",
+  "title": "title-5993270",
+  "description": "description-5993270",
+  "isActive": true,
+  "createdAt": "2018-05-28T18:30:00.000Z",
+  "createdBy": "createdBy.3kgfq@example.org",
+  "modifiedAt": "2012-06-30T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.3kgfq@example.net"
+}
+
+
+### Album
+# @name Album_DELETE
+DELETE {{server}}/music-lib/Album/59932705-842f-45e2-ba40-319bd995d02a
+Content-Type: application/json
+{{auth}}
+
+
+
+
+### Artist
+# @name Artist_POST
+POST {{server}}/music-lib/Artist
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "11971181-986f-48ac-b27d-d92520ca40ea",
+  "title": "title-11971181",
+  "isActive": false,
+  "createdAt": "2017-10-14T18:30:00.000Z",
+  "createdBy": "createdBy.74l0t@example.net",
+  "modifiedAt": "2022-01-22T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.74l0t@example.org"
+}
+
+
+### Artist
+# @name Artist_PATCH
+PATCH {{server}}/music-lib/Artist/11971181-986f-48ac-b27d-d92520ca40ea
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "11971181-986f-48ac-b27d-d92520ca40ea",
+  "title": "title-11971181",
+  "isActive": false,
+  "createdAt": "2017-10-14T18:30:00.000Z",
+  "createdBy": "createdBy.74l0t@example.net",
+  "modifiedAt": "2022-01-22T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.74l0t@example.org"
+}
+
+
+### Artist
+# @name Artist_DELETE
+DELETE {{server}}/music-lib/Artist/11971181-986f-48ac-b27d-d92520ca40ea
+Content-Type: application/json
+{{auth}}
+
+
+### Track
+# @name Track_POST
+POST {{server}}/music-lib/Track
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "11134628-253c-4c67-8450-430230136ec2",
+  "title": "title-11134628",
+  "description": "description-11134628",
+  "isActive": true,
+  "albumUUID": "11134628-655d-42a7-ad7e-c8c70f49852a",
+  "genreUUID": "11134628-ee71-49f6-a462-fc56e6775c68",
+  "album": {
+    "ID": "59932705-842f-45e2-ba40-319bd995d02a"
+  },
+  "genre": {
+    "ID": "27867841-df08-4bf4-ae5c-bbda7fd6f673"
+  },
+  "createdAt": "2007-07-11T18:30:00.000Z",
+  "createdBy": "createdBy.6mnj8@example.net",
+  "modifiedAt": "2023-01-14T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.6mnj8@example.net"
+}
+
+
+### Track
+# @name Track_PATCH
+PATCH {{server}}/music-lib/Track/11134628-253c-4c67-8450-430230136ec2
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "11134628-253c-4c67-8450-430230136ec2",
+  "title": "title-11134628",
+  "description": "description-11134628",
+  "isActive": true,
+  "albumUUID": "11134628-655d-42a7-ad7e-c8c70f49852a",
+  "genreUUID": "11134628-ee71-49f6-a462-fc56e6775c68",
+  "album": {
+    "ID": "59932705-842f-45e2-ba40-319bd995d02a"
+  },
+  "genre": {
+    "ID": "27867841-df08-4bf4-ae5c-bbda7fd6f673"
+  },
+  "createdAt": "2007-07-11T18:30:00.000Z",
+  "createdBy": "createdBy.6mnj8@example.net",
+  "modifiedAt": "2023-01-14T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.6mnj8@example.net"
+}
+
+
+### Track
+# @name Track_DELETE
+DELETE {{server}}/music-lib/Track/11134628-253c-4c67-8450-430230136ec2
+Content-Type: application/json
+{{auth}}
