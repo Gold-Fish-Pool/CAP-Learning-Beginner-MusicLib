@@ -14,7 +14,13 @@ jobs:
               run: npm install
             - name: running lint
               run: npm run lint
-            - name: running tests
-              run: npm run test
+
+    test-job:
+      runs-on: solinas-small
+      steps:
+          - name: installing dependencies
+            run: npm install
+          - name: running tests
+            run: npm run test
 
 
